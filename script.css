@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent scrollbars */
+  }
+  
+  .hover-text-yellow {
+    pointer-events: auto;
+  }
+  
+  .container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent scrollbars */
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh; /* Fixed height for navigation */
+  }
+  
+  .nav img {
+    height: 8vh; /* Slightly smaller than nav height */
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+  .bars {
+    display: flex;
+    gap: 1.2rem;
+    padding: 1rem;
+    height: 100%; /* Full height of nav */
+    align-items: center;
+  }
+  
+  .one {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Remaining height after nav */
+    width: 100%;
+  }
+  
+  .one img, #canvas {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+  }
+  
+  .one img {
+    mix-blend-mode: lighten;
+    filter: contrast(150%) brightness(110%) saturate(120%);
+    z-index: 1; /* Ensure the image is above the canvas */
+  }
+  
+  #canvas {
+      position: absolute;
+      width: 100%;
+      max-height: 100%;
+      z-index: 0;
+  }
+  
+  .bars a {
+    text-decoration: none;
+    color: rgb(246, 246, 246);
+    height: 100%; /* Full height of bars */
+    display: flex;
+    align-items: center;
+  }
+  
+  .bars a:hover {
+    color: rgb(172, 112, 0);
+  }
+  
