@@ -9,6 +9,12 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
 import { RGBShiftShader } from 'three/examples/jsm/shaders/RGBShiftShader.js';
 import gsap from 'gsap';
+// vite.config.js
+export default {
+    base: '/Cyberpunk-3js/', // Adjusted to the repo name, replacing spaces with hyphens
+    // other configurations
+  };
+  
 
 //scene
 const scene = new THREE.Scene();
