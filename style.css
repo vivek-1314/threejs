@@ -32,7 +32,8 @@ html, body {
 }
 
 .nav img {
-  height: 8vh; /* Slightly smaller than nav height */
+  height: 15vh;
+  width: 100%; /* Slightly smaller than nav height */
   width: auto; /* Maintain aspect ratio */
 }
 

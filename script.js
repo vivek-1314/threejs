@@ -23,8 +23,10 @@ canvas.width = canvas.offsetWidth;
 canvas.height = canvas.offsetHeight;
 //camera
 const aspectRatio = window.innerWidth / window.innerHeight;
-const camera = new THREE.PerspectiveCamera(40, aspectRatio, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(38, aspectRatio, 0.1, 1000);
 camera.position.z = 3.2;
+camera.position.y = 1;
+camera.position.x = 0;
 
 // GLTF Loader
 const loader = new GLTFLoader();
@@ -50,6 +52,9 @@ loader.load(
         if (window.innerWidth < 768) {
             model.scale.set(0.8, 0.8, 0.8);
         }
+        
+        // Ensure model is visible in front when reloading
+        model.position.z = 0; // Set z position to 0 to ensure it's in front
     },
     function (xhr) {
         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
